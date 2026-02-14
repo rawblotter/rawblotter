@@ -4,102 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAWBLOTTER</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: #b30000;
-  color: white;
-  text-align: center;
-}
-
-header {
-  padding: 30px;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 4px;
-}
-
-.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px 20px;
-}
-
-.product {
-  width: 260px;
-  transition: 0.3s ease;
-}
-
-.product:hover {
-  transform: scale(1.05);
-}
-
-.product img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.price {
-  margin: 10px 0;
-  font-weight: 700;
-}
-
-button {
-  padding: 10px 25px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-button:hover {
-  background: #222;
-}
-
-footer {
-  padding: 40px;
-  opacity: 0.6;
-  font-size: 14px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>RAWBLOTTER</header>
+<header>
+    <img src="logo.png" class="logo">
+    <a href="cart.html" class="cart-icon">●</a>
+</header>
 
-<div class="products">
+<section class="grid">
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x300">
-    <div class="price">CD – 400 PKR</div>
-    <button onclick="window.location.href='https://buy.stripe.com/YOUR_LINK'">BUY</button>
-  </div>
+    <div class="product">
+        <img src="product1.jpg">
+        <span>RB-01</span>
+    </div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x300">
-    <div class="price">HOODIE – 4500 PKR</div>
-    <button onclick="window.location.href='https://buy.stripe.com/YOUR_LINK'">BUY</button>
-  </div>
+    <div class="product">
+        <img src="product2.jpg">
+        <span>RB-02</span>
+    </div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x300">
-    <div class="price">DIGITAL ALBUM – 300 PKR</div>
-    <button onclick="window.location.href='https://buy.stripe.com/YOUR_LINK'">BUY</button>
-  </div>
+    <div class="product">
+        <img src="product3.jpg">
+        <span>RB-03</span>
+    </div>
 
-</div>
+    <div class="product">
+        <img src="product4.jpg">
+        <span>RB-04</span>
+    </div>
 
-<footer>
-© 2026 PENTHAUSE RECORDS. ALL RIGHTS RESERVED.
-</footer>
+    <div class="product">
+        <img src="product5.jpg">
+        <span>RB-05</span>
+    </div>
+
+    <div class="product">
+        <img src="product6.jpg">
+        <span>RB-06</span>
+    </div>
+
+</section>
 
 </body>
 </html>
-
