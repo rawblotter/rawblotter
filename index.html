@@ -3,49 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAWBLOTTER</title>
+<title>Rawbioter</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
-    <a href="cart.html" class="cart-icon">●</a>
+    <div class="top-bar">
+        <img src="assets/icon-expand.png" class="icon left" id="expandBtn">
+        <img src="assets/icon-cart.png" class="icon right" id="cartBtn">
+    </div>
+
+    <div class="logo-container">
+        <img src="assets/logo.png" class="logo">
+    </div>
+
+    <div class="filters">
+        <img src="assets/icon-music.png" class="filter" data-filter="music">
+        <img src="assets/icon-merch.png" class="filter" data-filter="merch">
+        <img src="assets/icon-tickets.png" class="filter" data-filter="tickets">
+        <img src="assets/icon-all.png" class="filter active" data-filter="all">
+    </div>
 </header>
 
-<section class="grid">
+<main>
+    <div class="product-grid" id="productGrid">
 
-    <div class="product">
-        <img src="product1.jpg">
-        <span>RB-01</span>
+        <!-- Example products -->
+        <div class="product" data-category="music">
+            <img src="assets/product1.jpg">
+            <div class="code">TCK-CD-XXX</div>
+        </div>
+
+        <div class="product" data-category="merch">
+            <img src="assets/product2.jpg">
+            <div class="code">HD-TCK-XXX</div>
+        </div>
+
+        <div class="product" data-category="music">
+            <img src="assets/product3.jpg">
+            <div class="code">DAS-CD-XXX</div>
+        </div>
+
+        <!-- Duplicate blocks for up to 36 items -->
+
     </div>
+</main>
 
-    <div class="product">
-        <img src="product2.jpg">
-        <span>RB-02</span>
-    </div>
-
-    <div class="product">
-        <img src="product3.jpg">
-        <span>RB-03</span>
-    </div>
-
-    <div class="product">
-        <img src="product4.jpg">
-        <span>RB-04</span>
-    </div>
-
-    <div class="product">
-        <img src="product5.jpg">
-        <span>RB-05</span>
-    </div>
-
-    <div class="product">
-        <img src="product6.jpg">
-        <span>RB-06</span>
-    </div>
-
-</section>
-
+<script src="script.js"></script>
 </body>
 </html>
