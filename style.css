@@ -1,6 +1,6 @@
 :root {
     --firebrick: #B22222;
-    --darkred: #8B1A1A;
+    --darkred: #7A1414;
 }
 
 * {
@@ -11,69 +11,88 @@
 
 body {
     background: var(--darkred);
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-/* ===== HEADER ===== */
+/* ======================
+   HEADER / NAV
+====================== */
 
 header {
-    padding: 20px 0 40px 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
     position: relative;
 }
+
+/* TOP LEFT + RIGHT ICONS */
 
 .top-bar {
     position: absolute;
     top: 20px;
     width: 100%;
+    pointer-events: none;
 }
 
 .icon {
-    width: 28px;
+    width: 34px;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .left {
     position: absolute;
-    left: 30px;
+    left: 32px;
 }
 
 .right {
     position: absolute;
-    right: 30px;
+    right: 32px;
 }
 
+/* LOGO */
+
 .logo {
-    width: 220px;
-    margin: 40px 0 25px 0;
+    width: 280px;
+    margin-bottom: 22px;
 }
+
+/* ======================
+   FILTER ICON ROW
+====================== */
 
 .filters {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 44px;
+    margin-bottom: 35px;
 }
 
-.filter {
-    width: 26px;
+.filter,
+.support {
+    width: 32px;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.75;
+    transition: opacity 0.15s ease;
 }
 
 .filter.active {
     opacity: 1;
 }
 
-/* ===== PRODUCT GRID ===== */
+/* ======================
+   PRODUCT GRID
+====================== */
 
 .product-grid {
     max-width: 1100px;
-    margin: auto;
+    margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
-    padding: 40px;
+    padding: 0 40px;
 }
 
 .product-grid.expanded {
@@ -89,30 +108,52 @@ header {
     display: block;
 }
 
+/* PRODUCT CODE */
+
 .code {
-    margin-top: 18px;
-    font-size: 13px;
+    margin-top: 15px;
+    font-size: 12px;
     letter-spacing: 2px;
+    opacity: 0.9;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ======================
+   RESPONSIVE
+====================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .product-grid {
-        grid-template-columns: 1fr;
+    header {
+        padding-top: 16px;
     }
 
     .logo {
-        width: 160px;
+        width: 200px;
+        margin-bottom: 18px;
     }
 
     .filters {
-        gap: 25px;
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+
+    .filter,
+    .support {
+        width: 26px;
+    }
+
+    .icon {
+        width: 28px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin: 30px auto;
     }
 }
