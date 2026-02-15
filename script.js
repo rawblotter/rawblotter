@@ -6,7 +6,7 @@ const cartBtn = document.getElementById('cartBtn');
 
 let expanded = false;
 
-/* FILTER SYSTEM */
+/* FILTER PRODUCTS */
 filters.forEach(btn => {
     btn.addEventListener('click', () => {
 
@@ -16,11 +16,8 @@ filters.forEach(btn => {
         const category = btn.dataset.filter;
 
         products.forEach(product => {
-            if (product.dataset.category === category) {
-                product.style.display = "block";
-            } else {
-                product.style.display = "none";
-            }
+            product.style.display =
+                product.dataset.category === category ? "block" : "none";
         });
     });
 });
