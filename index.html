@@ -3,67 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAWBIOTER</title>
+<title>PENTHAUSE</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-    <!-- TOP BAR -->
     <div class="top-bar">
-        <img src="assets/icon-expand.png" class="icon left" id="expandBtn" alt="Expand">
-        <img src="assets/icon-cart.png" class="icon right" id="cartBtn" alt="Cart">
+        <img src="assets/icon-expand.png" class="icon" id="expandBtn" alt="Expand">
+        <img src="assets/icon-cart.png" class="icon" id="cartBtn" alt="Cart">
     </div>
 
-    <!-- LOGO -->
-    <div class="logo-container">
-        <img src="assets/logo.png" class="logo" alt="Logo">
-    </div>
+    <img src="assets/logo.png" class="logo" alt="Logo">
 
-    <!-- ICON ROW -->
     <div class="filters">
-        <img src="assets/icon-tickets.png" class="filter" data-filter="tickets" alt="Tickets">
-        <img src="assets/icon-merch.png" class="filter" data-filter="merch" alt="Merch">
-        <img src="assets/icon-music.png" class="filter" data-filter="music" alt="Music">
-
-        <a href="https://your-support-link.com" target="_blank">
-            <img src="assets/icon-thunder.png" class="support" alt="Support">
-        </a>
+        <img src="assets/icon-tickets.png" class="icon filter" data-filter="tickets" alt="Tickets">
+        <img src="assets/icon-merch.png" class="icon filter" data-filter="merch" alt="Merch">
+        <img src="assets/icon-music.png" class="icon filter" data-filter="music" alt="Music">
+        <img src="assets/icon-thunder.png" class="icon" id="supportBtn" alt="Support">
     </div>
 </header>
 
 <main>
-    <div class="product music" data-name="TCK-CD" data-price="20">
-    <img src="assets/tck-cd.png" alt="TCK CD">
-    <span>TCK-CD</span>
-</div>
+    <div class="grid grid-3" id="productGrid">
 
-<div class="product music" data-name="TCK-DIGITAL" data-price="10">
-    <img src="assets/tck-digital.png" alt="TCK Digital Download">
-    <span>TCK-DIGITAL</span>
-</div>
+        <div class="product music" data-name="TCK-CD" data-price="20">
+            <img src="assets/tck-cd.png" alt="TCK CD">
+            <span>TCK-CD</span>
+        </div>
 
-<div class="product music" data-name="DAS-CD" data-price="20">
-    <img src="assets/das-cd.png" alt="DAS CD">
-    <span>DAS-CD</span>
-</div>
+        <div class="product music" data-name="TCK-DIGITAL" data-price="10">
+            <img src="assets/tck-digital.png" alt="TCK Digital">
+            <span>TCK-DIGITAL</span>
+        </div>
 
-<div class="product music" data-name="DAS-DIGITAL" data-price="10">
-    <img src="assets/das-digital.png" alt="DAS Digital Download">
-    <span>DAS-DIGITAL</span>
-</div>
+        <div class="product music" data-name="DAS-CD" data-price="20">
+            <img src="assets/das-cd.png" alt="DAS CD">
+            <span>DAS-CD</span>
+        </div>
 
-<div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-BLACK" data-price="40">
-    <img src="assets/rawblotter-og-shirt-black.png" alt="Rawblotter OG Shirt Black">
-    <span>RAWBLOTTER-OG-SHIRT-BLACK</span>
-</div>
+        <div class="product music" data-name="DAS-DIGITAL" data-price="10">
+            <img src="assets/das-digital.png" alt="DAS Digital">
+            <span>DAS-DIGITAL</span>
+        </div>
 
-<div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-WHITE" data-price="40">
-    <img src="assets/rawblotter-og-shirt-white.png" alt="Rawblotter OG Shirt White">
-    <span>RAWBLOTTER-OG-SHIRT-WHITE</span>
-</div>
+        <div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-BLACK" data-price="40">
+            <img src="assets/rawblotter-og-shirt-black.png" alt="Rawblotter Shirt Black">
+            <span>RAWBLOTTER-OG-SHIRT-BLACK</span>
+        </div>
 
-        <!-- duplicate product blocks as needed -->
+        <div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-WHITE" data-price="40">
+            <img src="assets/rawblotter-og-shirt-white.png" alt="Rawblotter Shirt White">
+            <span>RAWBLOTTER-OG-SHIRT-WHITE</span>
+        </div>
 
     </div>
 </main>
