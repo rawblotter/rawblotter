@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PENTHAUSE</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penthause Records</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="top-bar">
-        <img src="assets/icon-expand.png" class="icon" id="expandBtn" alt="Expand">
-        <img src="assets/icon-cart.png" class="icon" id="cartBtn" alt="Cart">
-    </div>
+<header class="header">
+  <div class="header-left">
+    <img src="assets/icon-expand.png" id="expandBtn" class="icon" />
+  </div>
 
-    <img src="assets/logo.png" class="logo" alt="Logo">
+  <div class="header-center">
+    <img src="assets/logo.png" class="logo"/>
+  </div>
 
-    <div class="filters">
-        <img src="assets/icon-tickets.png" class="icon filter" data-filter="tickets" alt="Tickets">
-        <img src="assets/icon-merch.png" class="icon filter" data-filter="merch" alt="Merch">
-        <img src="assets/icon-music.png" class="icon filter" data-filter="music" alt="Music">
-        <img src="assets/icon-thunder.png" class="icon" id="supportBtn" alt="Support">
-    </div>
+  <div class="header-right">
+    <a href="cart.html">
+      <img src="assets/icon-cart.png" class="icon"/>
+    </a>
+  </div>
 </header>
 
+<nav class="icon-nav">
+  <img src="assets/icon-tickets.png" class="icon filter" data-filter="tickets"/>
+  <img src="assets/icon-merch.png" class="icon filter" data-filter="merch"/>
+  <img src="assets/icon-music.png" class="icon filter" data-filter="music"/>
+  <a href="https://your-support-link.com">
+    <img src="assets/icon-thunder.png" class="icon"/>
+  </a>
+</nav>
+
 <main>
-    <div class="grid grid-3" id="productGrid">
-
-        <div class="product music" data-name="TCK-CD" data-price="20">
-            <img src="assets/tck-cd.png" alt="TCK CD">
-            <span>TCK-CD</span>
-        </div>
-
-        <div class="product music" data-name="TCK-DIGITAL" data-price="10">
-            <img src="assets/tck-digital.png" alt="TCK Digital">
-            <span>TCK-DIGITAL</span>
-        </div>
-
-        <div class="product music" data-name="DAS-CD" data-price="20">
-            <img src="assets/das-cd.png" alt="DAS CD">
-            <span>DAS-CD</span>
-        </div>
-
-        <div class="product music" data-name="DAS-DIGITAL" data-price="10">
-            <img src="assets/das-digital.png" alt="DAS Digital">
-            <span>DAS-DIGITAL</span>
-        </div>
-
-        <div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-BLACK" data-price="40">
-            <img src="assets/rawblotter-og-shirt-black.png" alt="Rawblotter Shirt Black">
-            <span>RAWBLOTTER-OG-SHIRT-BLACK</span>
-        </div>
-
-        <div class="product merch" data-name="RAWBLOTTER-OG-SHIRT-WHITE" data-price="40">
-            <img src="assets/rawblotter-og-shirt-white.png" alt="Rawblotter Shirt White">
-            <span>RAWBLOTTER-OG-SHIRT-WHITE</span>
-        </div>
-
-    </div>
+  <div id="productGrid" class="grid grid-3"></div>
 </main>
+
+<footer class="footer">
+  © 2026 PENTHAUSE RECORDS. ALL RIGHTS RESERVED.
+</footer>
 
 <script src="script.js"></script>
 </body>
