@@ -3,49 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rawbioter</title>
+<title>Brand</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
+    <!-- TOP BAR -->
     <div class="top-bar">
         <img src="assets/icon-expand.png" class="icon left" id="expandBtn">
         <img src="assets/icon-cart.png" class="icon right" id="cartBtn">
     </div>
 
+    <!-- CENTER LOGO -->
     <div class="logo-container">
         <img src="assets/logo.png" class="logo">
     </div>
 
+    <!-- FILTER / SUPPORT ICONS -->
     <div class="filters">
-        <img src="assets/icon-music.png" class="filter" data-filter="music">
-        <img src="assets/icon-merch.png" class="filter" data-filter="merch">
         <img src="assets/icon-tickets.png" class="filter" data-filter="tickets">
-        <img src="assets/icon-all.png" class="filter active" data-filter="all">
+        <img src="assets/icon-merch.png" class="filter" data-filter="merch">
+        <img src="assets/icon-music.png" class="filter" data-filter="music">
+        
+        <!-- THUNDER = SUPPORT LINK -->
+        <a href="https://your-support-link.com" target="_blank">
+            <img src="assets/icon-thunder.png" class="support">
+        </a>
     </div>
 </header>
 
 <main>
     <div class="product-grid" id="productGrid">
 
-        <!-- Example products -->
+        <!-- Example Products -->
         <div class="product" data-category="music">
             <img src="assets/product1.jpg">
-            <div class="code">TCK-CD-XXX</div>
+            <div class="code">MUS-001</div>
         </div>
 
         <div class="product" data-category="merch">
             <img src="assets/product2.jpg">
-            <div class="code">HD-TCK-XXX</div>
+            <div class="code">MER-001</div>
         </div>
 
-        <div class="product" data-category="music">
+        <div class="product" data-category="tickets">
             <img src="assets/product3.jpg">
-            <div class="code">DAS-CD-XXX</div>
+            <div class="code">TIC-001</div>
         </div>
-
-        <!-- Duplicate blocks for up to 36 items -->
 
     </div>
 </main>
