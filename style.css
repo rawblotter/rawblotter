@@ -1,6 +1,6 @@
 :root {
     --firebrick: #B22222;
-    --darkred: #7A1414;
+    --darkred: #6E1414;
 }
 
 * {
@@ -11,84 +11,72 @@
 
 body {
     background: var(--darkred);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
 }
 
-/* ======================
-   HEADER / NAV
-====================== */
+/* HEADER */
 
 header {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 40px;
     text-align: center;
     position: relative;
 }
 
-/* TOP LEFT + RIGHT ICONS */
+/* TOP BAR */
 
 .top-bar {
     position: absolute;
-    top: 20px;
+    top: 25px;
     width: 100%;
-    pointer-events: none;
 }
 
 .icon {
-    width: 34px;
+    width: 26px;
     cursor: pointer;
-    pointer-events: auto;
 }
 
 .left {
     position: absolute;
-    left: 32px;
+    left: 35px;
 }
 
 .right {
     position: absolute;
-    right: 32px;
+    right: 35px;
 }
 
 /* LOGO */
 
 .logo {
-    width: 280px;
-    margin-bottom: 22px;
+    width: 220px;
+    margin-bottom: 35px;
 }
 
-/* ======================
-   FILTER ICON ROW
-====================== */
+/* FILTER ROW */
 
 .filters {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 44px;
-    margin-bottom: 35px;
+    gap: 50px;
 }
 
 .filter,
 .support {
-    width: 32px;
+    width: 26px;
     cursor: pointer;
-    opacity: 0.75;
-    transition: opacity 0.15s ease;
+    opacity: 0.7;
 }
 
 .filter.active {
     opacity: 1;
 }
 
-/* ======================
-   PRODUCT GRID
-====================== */
+/* PRODUCT GRID */
 
 .product-grid {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 70px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
@@ -99,61 +87,35 @@ header {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.product {
-    text-align: center;
-}
-
 .product img {
     width: 100%;
     display: block;
 }
 
-/* PRODUCT CODE */
-
 .code {
     margin-top: 15px;
     font-size: 12px;
     letter-spacing: 2px;
-    opacity: 0.9;
 }
 
-/* ======================
-   RESPONSIVE
-====================== */
+/* RESPONSIVE */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    header {
-        padding-top: 16px;
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
     .logo {
-        width: 200px;
-        margin-bottom: 18px;
+        width: 170px;
     }
 
     .filters {
         gap: 30px;
-        margin-bottom: 25px;
-    }
-
-    .filter,
-    .support {
-        width: 26px;
-    }
-
-    .icon {
-        width: 28px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin: 30px auto;
     }
 }
