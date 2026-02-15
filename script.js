@@ -1,34 +1,43 @@
-const filters = document.querySelectorAll('.filter');
-const products = document.querySelectorAll('.product');
-const grid = document.getElementById('productGrid');
-const expandBtn = document.getElementById('expandBtn');
-const cartBtn = document.getElementById('cartBtn');
+const grid = document.getElementById("productGrid");
+const expandBtn = document.getElementById("expandBtn");
+const cartBtn = document.getElementById("cartBtn");
+const supportBtn = document.getElementById("supportBtn");
+const filters = document.querySelectorAll(".filter");
+const products = document.querySelectorAll(".product");
 
-let expanded = false;
+let gridState = 3;
 
-/* FILTER PRODUCTS */
-filters.forEach(btn => {
-    btn.addEventListener('click', () => {
+/* Expand grid */
+expandBtn.addEventListener("click", () => {
+    grid.className = "grid " + (gridState === 3 ? "grid-6" : "grid-3");
+    gridState = gridState === 3 ? 6 : 3;
+});
 
-        filters.forEach(f => f.classList.remove('active'));
-        btn.classList.add('active');
-
-        const category = btn.dataset.filter;
-
-        products.forEach(product => {
-            product.style.display =
-                product.dataset.category === category ? "block" : "none";
+/* Filters */
+filters.forEach(filter => {
+    filter.addEventListener("click", () => {
+        const type = filter.dataset.filter;
+        products.forEach(p => {
+            p.style.display = p.classList.contains(type) ? "block" : "none";
         });
     });
 });
 
-/* EXPAND GRID */
-expandBtn.addEventListener('click', () => {
-    expanded = !expanded;
-    grid.classList.toggle('expanded');
+/* Product focus (1 grid) */
+products.forEach(product => {
+    product.addEventListener("click", () => {
+        grid.className = "grid grid-1";
+        products.forEach(p => p.style.display = "none");
+        product.style.display = "block";
+    });
 });
 
-/* CART REDIRECT */
-cartBtn.addEventListener('click', () => {
+/* Cart */
+cartBtn.addEventListener("click", () => {
     window.location.href = "cart.html";
+});
+
+/* Support */
+supportBtn.addEventListener("click", () => {
+    window.open("https://your-support-link.com", "_blank");
 });
