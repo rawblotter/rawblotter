@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="site-header">
-    <img src="assets/logo.png" class="logo" alt="Logo">
+<header class="header">
+  <a href="index.html">
+    <img src="assets/logo.png" class="logo"/>
+  </a>
 </header>
 
-<main style="max-width:420px;margin:40px auto;text-align:center;">
-    <div style="
-        background:#111;
-        padding:30px;
-        border-radius:6px;
-        box-shadow:0 0 30px rgba(0,0,0,0.6);
-    ">
-        <h3 style="margin-bottom:20px;">RECEIPT</h3>
-
-        <p>Items will appear here</p>
-
-        <button style="
-            margin-top:20px;
-            background:#B22222;
-            border:none;
-            padding:14px 40px;
-            color:white;
-            font-size:14px;
-            cursor:pointer;
-        ">
-            Checkout
-        </button>
-
-        <p style="margin-top:20px;">
-            <a href="mailto:contact@yourbrand.com" style="color:white;">Contact</a>
-        </p>
-    </div>
+<main class="cart-container">
+  <h2>Order Receipt</h2>
+  <div id="cartItems"></div>
+  <div class="cart-total">
+    <strong>Total:</strong> $<span id="totalPrice">0</span>
+  </div>
 </main>
 
+<footer class="footer">
+  © 2026 PENTHAUSE RECORDS
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
